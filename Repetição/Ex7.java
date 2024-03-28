@@ -34,8 +34,11 @@ valor lido será sempre maior que o primeiro valor lido. */
         
         int vf = n1 +1;
         int vft = 0;
-        
-        for(int v = n1 + 1; v < n2 - 1; v++){
+        if (n2 < n1) {
+            System.out.print("O segundo numero é menor, reinicie o programa e tente novamente\n");
+        }
+        else{
+            for(int v = n1 + 1; v < n2 - 1; v++){
             System.out.print("Entre " + n1 + " e " + n2 + " temos o numero: " + v + "\n");
             
             int v2 = v +1;
@@ -43,7 +46,7 @@ valor lido será sempre maior que o primeiro valor lido. */
             vf = vf + v2;
             
             System.out.print("\nA soma atual é: " + vf + "\n");
-        }
+            }
         
         System.out.print(" \nNo final, a soma total é: " + vf + "\n");
         
@@ -53,6 +56,6 @@ valor lido será sempre maior que o primeiro valor lido. */
                 
         
             }
-
+    }
     
 }
